@@ -1,0 +1,75 @@
+@import 'node_modules/sass-bem/bem';
+
+$bem-component-namespace: 'md';
+
+@include c('board') {
+
+  @include e('swiper') {
+    height: 480rpx;
+  }
+
+  @include e('slide-image') {
+    height: 100%;
+    width: 100%;
+  }
+
+  @include e('list') {
+    box-sizing: border-box;
+    background-color: #f8f9fb;
+  }
+
+  @include e('item') {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    font-size: 20rpx;
+    margin: 40rpx 0;
+    padding: 20rpx;
+    background-color: #fff;
+  }
+
+  @include e('title') {
+    display: flex;
+    margin-bottom: 10rpx;
+    width: 100%;
+  }
+
+  @include e('title-text') {
+    flex: 1;
+  }
+
+  @include e('title-image') {
+    height: 20rpx;
+    width: 20rpx;
+  }
+
+  @include e('content') {
+    height: 300rpx;
+  }
+
+  @include e('inner') {
+    display: flex;
+    flex-direction: row;
+    height: 300rpx;
+    width: 900rpx;
+  }
+
+  @include e('movie') {
+    display: flex;
+    flex-direction: column;
+    width: 180rpx;
+    margin: 10rpx;
+  }
+
+  @include e('movie-image') {
+    width: 180rpx;
+    height: 250rpx;
+  }
+
+  @include e('movie-text') {
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

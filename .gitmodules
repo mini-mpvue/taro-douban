@@ -1,0 +1,6 @@
+[submodule "sass-bem"]
+	path = submodule/sass-bem
+	url = https://github.com/zgabievi/sass-bem
+[submodule "sass-config"]
+	path = submodules/sass-config
+	url = https://github.com/zgabievi/sass-config
