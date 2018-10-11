@@ -1,0 +1,35 @@
+@import 'node_modules/sass-bem/bem';
+
+$bem-component-namespace: 'md';
+
+@include c('splash') {
+  height: 100%;
+
+  @include e('swiper') {
+    height: 100%;
+  }
+
+  @include e('item') {
+    flex: 1;
+  }
+
+  @include e('image') {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: .9;
+  }
+
+  @include e('start') {
+    position: absolute;
+    bottom: 200rpx;
+    left: 50%;
+    width: 300rpx;
+    margin-left: -150rpx;
+    background-color: rgba(64, 88, 109, .4);
+    color: #fff;
+    border: 1rpx solid rgba(64, 88, 109, .8);
+    border-radius: 200rpx;
+    font-size: 40rpx;
+  }
+}
