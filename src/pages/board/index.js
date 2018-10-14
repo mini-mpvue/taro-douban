@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Swiper, SwiperItem, Image, Block, Navigator, ScrollView, Text } from '@tarojs/components'
+import { View, Swiper, SwiperItem, Image, Block, ScrollView, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 
 import { getBoards } from '../../actions/board'
@@ -23,6 +23,12 @@ class Board extends Component {
   navigateToList = (item) => {
     Taro.navigateTo({
       url: '/pages/list/index?type=' + item.key + '&title=' + item.title
+    })
+  }
+
+  navigateToItem = (id) => {
+    Taro.navigateTo({
+      url: '/pages/item/index?id=' + id
     })
   }
 
@@ -55,24 +61,20 @@ class Board extends Component {
                         <View className='md-board__inner'>
                           {
                             item.subjects.map((movie, i) => (
-                              <Navigator key={movie.id + index + i} url={'../item/main?id=' + movie.id}>
-                                <View className='md-board__movie'>
-                                  <Image className='md-board__movie-image' src={movie.images.large} mode='aspectFill' />
-                                  <Text className='md-board__movie-text'>{ movie.title }</Text>
-                                </View>
-                              </Navigator>
+                              <View className='md-board__movie' key={movie.id + index + i} onClick={this.navigateToItem.bind(this, movie.id)}>
+                                <Image className='md-board__movie-image' src={movie.images.large} mode='aspectFill' />
+                                <Text className='md-board__movie-text'>{ movie.title }</Text>
+                              </View>
                             ))
                           }
                         </View> :
                         <View className='md-board__inner'>
                           {
                             item.subjects.map((movie, i) => (
-                              <Navigator key={movie.rank + index + i} url={'../item/main?id=' + movie.subject.id}>
-                                <View className='md-board__movie'>
-                                  <Image className='md-board__movie-image' src={movie.subject.images.large} mode='aspectFill' />
-                                  <Text className='md-board__movie-text'>{  movie.subject.title }</Text>
-                                </View>
-                              </Navigator>
+                              <View className='md-board__movie' key={movie.rank + index + i} onClick={this.navigateToItem.bind(this,  movie.subject.id)}>
+                                <Image className='md-board__movie-image' src={movie.subject.images.large} mode='aspectFill' />
+                                <Text className='md-board__movie-text'>{  movie.subject.title }</Text>
+                              </View>
                             ))
                           }
                         </View>

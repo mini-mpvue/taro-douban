@@ -1,3 +1,4 @@
 export const MOVIE_LIST = 'MOVIE_LIST'
 export const MOVIE_ITEM = 'MOVIE_ITEM'
-export const CLEAR_MOVIE = 'CLEAR_MOVIE'
+export const CLEAR_MOVIE_LIST = 'CLEAR_MOVIE_LIST'
+export const CLEAR_MOVIE_ITEM = 'CLEAR_MOVIE_ITEM'

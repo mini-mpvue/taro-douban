@@ -1,0 +1,60 @@
+@import 'node_modules/sass-bem/bem';
+
+$bem-component-namespace: 'md';
+
+@include c('item') {
+
+  @include e('background') {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1000;
+    opacity: .1;
+  }
+
+  @include e('meta') {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50rpx 40rpx;
+  }
+
+  @include e('poster') {
+    width: 100%;
+    height: 800rpx;
+    margin: 20rpx;
+  }
+
+  @include e('title') {
+    font-style: 42rpx;
+    color: #444;
+  }
+
+  @include e('info') {
+    font-size: 24rpx;
+    color: #888;
+    margin-top: 20rpx;
+    width: 80%;
+  }
+
+  @include e('summary') {
+    width: 80%;
+    margin: 30rpx auto;
+  }
+
+  @include e('label') {
+    display: block;
+    font-size: 30rpx;
+    margin-bottom: 30rpx;
+  }
+
+  @include e('content') {
+    color: #666;
+    font-size: 22rpx;
+    padding: 2em;
+  }
+}
