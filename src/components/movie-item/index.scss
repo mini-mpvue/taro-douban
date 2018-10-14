@@ -1,0 +1,53 @@
+@import 'node_modules/sass-bem/bem';
+
+$bem-component-namespace: 'md';
+
+@include c('movie-item') {
+
+  @include e('item') {
+    display: flex;
+    padding: 20rpx 40rpx;
+    border-bottom: 1rpx solid #eee;
+    cursor: pointer;
+  }
+
+  @include e('poster') {
+    width: 128rpx;
+    height: 168rpx;
+    margin-right: 20rpx;
+  }
+
+  @include e('meta') {
+    flex: 1;
+  }
+
+  @include e('title') {
+    display: block;
+    margin-bottom: 15rpx;
+    font-size: 32rpx;
+  }
+
+  @include e('sub-title') {
+    display: block;
+    margin-bottom: 15rpx;
+    font-size: 22rpx;
+    color: #c0c0c0;
+  }
+
+  @include e('artists') {
+    font-size: 24rpx;
+    color: #999;
+  }
+
+  @include e('rating-text') {
+    display: inline-block;
+    width: 40rpx;
+    font-size: 28rpx;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(247, 76, 49, 0.8);
+    color: #fff;
+    padding: 10rpx;
+    border-radius: 20rpx;
+  }
+}

@@ -20,6 +20,12 @@ class Board extends Component {
     this.props.getBoardData()
   }
 
+  navigateToList = (item) => {
+    Taro.navigateTo({
+      url: '/pages/list/index?type=' + item.key + '&title=' + item.title
+    })
+  }
+
   render () {
     return(
       <View className='md-board'>
@@ -39,12 +45,10 @@ class Board extends Component {
             this.props.boards.map((item, index) => (
               <Block key={item.key}>
                 <View className='md-board__item'>
-                  <Navigator url={'../list/main?type=' + item.key + '&title=' + item.title} hover-class='none'>
-                    <View className='md-board__title'>
-                      <Text className='md-board__title-text'>{ item.title }</Text>
-                      <Image className='md-board__title-image' src={arrowRightPng} mode='aspectFill' />
-                    </View>
-                  </Navigator>
+                  <View className='md-board__title' onClick={this.navigateToList.bind(this, item)}>
+                    <Text className='md-board__title-text'>{ item.title }</Text>
+                    <Image className='md-board__title-image' src={arrowRightPng} mode='aspectFill' />
+                  </View>
                   <ScrollView className='md-board__content' scroll-x>
                     {
                       item.key !== 'us_box' ?
