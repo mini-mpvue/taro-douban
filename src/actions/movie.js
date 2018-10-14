@@ -21,10 +21,10 @@ export function clearMovie () {
   }
 }
 
-export function getMovies ({ type }) {
+export function getMovies ({ type, search }) {
   return (dispatch, getState) => {
     const state = getState()
-    const { search, page, movies } = state.movie
+    const { page, movies } = state.movie
     getBoardData({ board: type, page, search })
       .then(data => {
         dispatch({
