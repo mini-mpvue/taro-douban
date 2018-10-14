@@ -57,8 +57,8 @@ class List extends Component {
       <View className='md-list'>
         <MovieList movies={this.props.movies} hasMore={this.props.hasMore} type={this.state.type}></MovieList>
       </View>
-    );
+    )
   }
 }
 
-export default List;
+export default List

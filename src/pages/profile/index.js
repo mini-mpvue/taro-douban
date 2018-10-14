@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Button, Text, Image } from '@tarojs/components';
+import { View, Button, Text, Image } from '@tarojs/components'
 
-import { login, getUserInfo } from '../../utils/wechat'
+import { getUserInfo } from '../../utils/wechat'
 
 import qrcodesgPng from '../../assets/images/qrcode-sg.png'
 

@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Swiper, SwiperItem, Image, Button } from '@tarojs/components';
+import { View, Swiper, SwiperItem, Image, Button } from '@tarojs/components'
 
 import { getStorage, setStorage } from '../../utils/wechat'
 import { getBoardData } from '../../utils/api'

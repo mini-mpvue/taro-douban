@@ -40,8 +40,8 @@ class MovieList extends Component {
           </View>
         </View>
       </View>
-    );
+    )
   }
 }
 
-export default MovieList;
+export default MovieList

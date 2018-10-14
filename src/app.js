@@ -3,8 +3,7 @@ import '@tarojs/async-await'
 import { Provider } from '@tarojs/redux'
 
 // import Index from './pages/index'
-// import Splash from './pages/splash'
-import Board from './pages/board'
+import Splash from './pages/splash'
 
 import configStore from './store'
 
@@ -16,12 +15,13 @@ class App extends Component {
 
   config = {
     pages: [
-      'pages/board/index',
       'pages/splash/index',
+      'pages/board/index',
       'pages/search/index',
       'pages/profile/index',
       'pages/list/index',
-      'pages/item/index'
+      'pages/item/index',
+      'pages/index/index'
     ],
     window: {
       backgroundColor: '#f8f9fb',
@@ -70,8 +70,7 @@ class App extends Component {
   render () {
     return (
       <Provider store={store}>
-        {/* <Index /> */}
-        <Board />
+        <Splash />
       </Provider>
     )
   }

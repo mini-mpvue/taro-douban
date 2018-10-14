@@ -66,8 +66,8 @@ class Item extends Component {
           </Block>
       }
       </View>
-    );
+    )
   }
 }
 
-export default Item;
+export default Item

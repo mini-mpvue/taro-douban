@@ -28,8 +28,8 @@ class MovieItem extends Component {
           </View>
         </View>
       </View>
-    );
+    )
   }
 }
 
-export default MovieItem;
+export default MovieItem
