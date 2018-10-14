@@ -25,8 +25,7 @@ class List extends Component {
   }
 
   state = {
-    type: '',
-    title: ''
+    type: ''
   }
 
   getMovieList = () => {
@@ -45,10 +44,8 @@ class List extends Component {
 
   componentWillMount () {
     const { type, title } = this.$router.params
-    this.setState({
-      type,
-      title
-    })
+    wx.setNavigationBarTitle({ title: title + ' « 电影 « 豆瓣' })
+    this.setState({ type })
   }
 
   componentDidMount () {

@@ -2,7 +2,9 @@ import Taro, { Component } from '@tarojs/taro'
 import '@tarojs/async-await'
 import { Provider } from '@tarojs/redux'
 
-import Index from './pages/index'
+// import Index from './pages/index'
+// import Splash from './pages/splash'
+import Board from './pages/board'
 
 import configStore from './store'
 
@@ -14,10 +16,12 @@ class App extends Component {
 
   config = {
     pages: [
-      'pages/index/index',
       'pages/board/index',
+      'pages/splash/index',
       'pages/search/index',
-      'pages/profile/index'
+      'pages/profile/index',
+      'pages/list/index',
+      'pages/item/index'
     ],
     window: {
       backgroundColor: '#f8f9fb',
@@ -36,20 +40,20 @@ class App extends Component {
         {
           text: '榜单',
           pagePath: 'pages/board/index',
-          iconPath: 'static/images/board.png',
-          selectedIconPath: 'static/images/board-actived.png'
+          iconPath: 'assets/images/board.png',
+          selectedIconPath: 'assets/images/board-actived.png'
         },
         {
           text: '搜索',
           pagePath: 'pages/search/index',
-          iconPath: 'static/images/search.png',
-          selectedIconPath: 'static/images/search-actived.png'
+          iconPath: 'assets/images/search.png',
+          selectedIconPath: 'assets/images/search-actived.png'
         },
         {
           text: '我的',
           pagePath: 'pages/profile/index',
-          iconPath: 'static/images/profile.png',
-          selectedIconPath: 'static/images/profile-actived.png'
+          iconPath: 'assets/images/profile.png',
+          selectedIconPath: 'assets/images/profile-actived.png'
         }
       ]
     }
@@ -66,7 +70,8 @@ class App extends Component {
   render () {
     return (
       <Provider store={store}>
-        <Index />
+        {/* <Index /> */}
+        <Board />
       </Provider>
     )
   }

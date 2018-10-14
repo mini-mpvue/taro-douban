@@ -3,6 +3,7 @@ import { View, Image, Block, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 
 import { getMovie, clearMovie } from '../../actions/movie'
+import wx from '../../utils/wx'
 
 import './index.scss'
 
@@ -33,6 +34,10 @@ class Item extends Component {
 
   componentDidMount () {
     this.props.getMovieData(this.state.id)
+  }
+
+  componentWillReceiveProps (nextProps) {
+    wx.setNavigationBarTitle({ title: nextProps.movie.title + ' « 电影 « 豆瓣' })
   }
 
   render() {
