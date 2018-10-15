@@ -6,6 +6,10 @@
 
 [基于 mpvue 实现豆瓣电影微信小程序](https://github.com/mini-mpvue/mpvue-douban)
 
+## 演示
+
+![taro-douban](taro-douban.gif)
+
 ## 运行
 
 ```bash
