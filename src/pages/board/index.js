@@ -16,6 +16,10 @@ import arrowRightPng from '../../assets/images/arrowright.png'
   }
 }))
 class Board extends Component {
+  config = {
+    navigationBarTitleText: '榜单 « 电影 « 豆瓣'
+  }
+
   componentDidMount () {
     this.props.getBoardData()
   }

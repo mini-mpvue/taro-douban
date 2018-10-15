@@ -6,6 +6,10 @@ import { getUserInfo } from '../../utils/wechat'
 import qrcodesgPng from '../../assets/images/qrcode-sg.png'
 
 class Profile extends Component {
+  config = {
+    navigationBarTitleText: '关于我'
+  }
+
   state = {
     // title: '关于',
     userInfo: {

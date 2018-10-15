@@ -19,6 +19,10 @@ import './index.scss'
   }
 }))
 class Search extends Component {
+  config = {
+    navigationBarTitleText: '搜索'
+  }
+
   state = {
     q: '',
     subtitle: '请在此输入搜索内容'
@@ -41,7 +45,7 @@ class Search extends Component {
     this.getSearchData()
   }
 
-  render() {
+  render () {
     return (
       <View class='md-search'>
         <View class='md-search__header'>
